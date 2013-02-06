@@ -48,14 +48,9 @@ sio.sockets.on('connection', function (socket) {
     socket.room = data.room;
 
     if (sio.sockets.clients(data.room).length == 1) {
-      socket.isHost = true;
-      socket.isPeer = false;
       socket.files = [];
     } else {
-      socket.isHost = false;
-      socket.isPeer = true;
       socket.hoster = sio.sockets.clients(data.room)[0];
-      // socket.hoster.files = [];
       // sio.sockets.clients(data.room)[0].peer = socket;
 
       if (socket.hoster.files.length) {
@@ -65,7 +60,7 @@ sio.sockets.on('connection', function (socket) {
   });
 
   socket.on('hostSendReady', function (data) {
-    console.log('Host is ready to send the file', data);
+    // console.log('Host is ready to send the file', data);
     socket.files.push(data);
     sio.sockets.in(socket.room).emit('hostFilesUpdated', data);
   });
