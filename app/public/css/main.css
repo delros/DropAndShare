@@ -1,0 +1,29 @@
+#status {
+  padding: 5px;
+  color: #fff;
+  background: #ccc;
+}
+#status.fail {
+  background: #c00;
+}
+#status.success {
+  background: #0c0;
+}
+#holder { 
+  border: 5px dashed #ccc; 
+  min-height: 200px; 
+  margin: 20px auto;
+  padding: 12px;
+}
+#holder.hover { 
+  border-color: #333; 
+}
+#holder a {
+  margin-left: 5px
+}
+#holder.download {
+  border: none;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}

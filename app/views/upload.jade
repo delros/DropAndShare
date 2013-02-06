@@ -1,0 +1,22 @@
+!!! 5
+html(lang="en")
+  head
+    title Send page
+    script(src="/socket.io/socket.io.js")
+    link(href="/bootstrap/css/bootstrap.min.css", rel="stylesheet", type="text/css")
+    link(href="/css/main.css", rel="stylesheet", type="text/css")
+  body
+    div(class="container")
+      div(class="row")
+        div(class="span12") 
+          h1 ApplicationName
+          h3 Upload page
+          p Share this link 
+            code #{shareLink}
+          p Simply drag and drop the files to section below
+      div(class="row")
+        div(class="span12")
+          div(id="holder")
+    //- script(src="http://code.jquery.com/jquery-latest.js")
+    //- script(src="/bootstrap/js/bootstrap.min.js")
+    script(src="/js/upload.js")

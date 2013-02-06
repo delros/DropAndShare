@@ -1,0 +1,18 @@
+!!! 5
+html(lang="en")
+  head
+    title Receive page
+    script(src="/socket.io/socket.io.js")
+    link(href="/bootstrap/css/bootstrap.min.css", rel="stylesheet", type="text/css")
+    link(href="/css/main.css", rel="stylesheet", type="text/css")
+  body
+    div(class="container")
+      div(class="row")
+        div(class="span12") 
+          h1 ApplicationName
+          h3 Download page
+          p Click on file link to start downloading
+      div(class="row")
+        div(class="span12")
+          div(id="holder", class="download")
+    script(src="/js/download.js")
