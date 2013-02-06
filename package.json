@@ -1,5 +1,5 @@
 {
-  "name": "test-yandex",
+  "name": "DropAndShare",
   "description": "Test task for Yandex interview",
   "dependencies": {
     "config": "~0.4.18",
